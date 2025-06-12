@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-content">
+        <div class="card-header">
+            <h5 class="card-title">Form {{(terreno.id > 0)? 'Update': 'Create'}} Terreno</h5>
+        </div>
+        <div class="card-body">
+
+            <form (ngSubmit)="onSubmit(terrenoForm)" #terrenoForm="ngForm">
+
+                <div>
+                    <input placeholder="Superficie" name="superficie" [(ngModel)]="terreno.superficie" class="form-control my-2" 
+                        #superficie="ngModel"><!--required-->
+                        @if (errors?.superficie) {
+                            <div class="text-danger">{{ errors.superficie }}</div>
+                        }
+                   
+                </div>
+                <div>
+                    <input placeholder="Cultivo" name="cultivo" [(ngModel)]="terreno.cultivo" 
+                        class="form-control my-2" #cultivo="ngModel"><!--required-->
+                        @if (errors?.cultivo) {
+                            <div class="text-danger">{{ errors.cultivo }}</div>
+                        }
+                   
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-primary m-2" ><!-- [disabled]="userForm.invalid"-->
+                        {{(terreno.id > 0)? 'Editar': 'Crear'}}
+                    </button>
+
+                    <button type="button" class="btn btn-secondary my-2" (click)="onClear(terrenoForm)">
+                        Limpiar
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,64 @@
+.navbar {
+  background: linear-gradient(90deg, #689f38 80%, #a1887f 100%);
+  box-shadow: 0 2px 8px #0002;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.navbar-brand::before {
+  content: "🌱";
+  font-size: 1.3em;
+}
+
+.navbar-nav .nav-link {
+  color: #f1f8e9 !important;
+  border-radius: 20px;
+  margin: 0 0.2em;
+  transition: background 0.2s, color 0.2s;
+  padding: 0.4em 1em;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  background: #c5e1a5;
+  color: #33691e !important;
+}
+
+.navbar-nav .nav-link[disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.navbar-nav .btn {
+  background: #fff;
+  color: #689f38;
+  border: none;
+  border-radius: 20px;
+  padding: 0.4em 1em;
+  margin-left: 0.5em;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-nav .btn:hover {
+  background: #a5d6a7;
+  color: #33691e;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-link,
+  .navbar-nav .btn {
+    margin: 0.2em 0;
+    width: 100%;
+    text-align: left;
+  }
+}

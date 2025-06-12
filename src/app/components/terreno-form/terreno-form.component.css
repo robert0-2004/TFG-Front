@@ -1,0 +1,88 @@
+.card {
+  background: linear-gradient(120deg, #efebe9 70%, #d7ccc8 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0002;
+  border: none;
+  margin: 2rem auto;
+  max-width: 420px;
+  padding: 0;
+}
+
+.card-header {
+  background: linear-gradient(90deg, #a1887f 80%, #8d6e63 100%);
+  border-radius: 18px 18px 0 0;
+  padding: 1.2rem 1.5rem 0.7rem 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.card-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #4e342e;
+  margin: 0;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #bcaaa4;
+  transition: border 0.2s;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  border-color: #8d6e63;
+  box-shadow: 0 0 0 0.1rem #8d6e6340;
+}
+
+.btn-primary {
+  background: #a1887f;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #6d4c41;
+}
+
+.btn-secondary {
+  background: #bcaaa4;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #4e342e;
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #a1887f;
+  color: #fff;
+}
+
+.text-danger {
+  color: #b71c1c;
+  font-size: 0.95em;
+  margin-bottom: 0.5em;
+  margin-left: 0.2em;
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 98vw;
+    margin: 1rem 0.5rem;
+  }
+  .card-body {
+    padding: 1rem 0.5rem;
+  }
+  .card-header {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+}

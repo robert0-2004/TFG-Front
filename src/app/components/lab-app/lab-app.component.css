@@ -1,0 +1,26 @@
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Reduce la altura para evitar scroll */
+    overflow: hidden;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 80vh; /* Mantiene la altura en proporción */
+    object-fit: cover;
+}
+
+
+
+.carousel-caption h5 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.carousel-caption p {
+    font-size: 16px;
+    color: white;
+}

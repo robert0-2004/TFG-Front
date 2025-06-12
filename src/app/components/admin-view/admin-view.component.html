@@ -1,0 +1,55 @@
+<h3 class="mx-3 my-4">{{title}}</h3>
+
+
+<input type="text" class="form-control mb-3 mx-3 w-25" placeholder="Buscar" [(ngModel)]="searchTerm"
+    (ngModelChange)="onSearchChange()" />
+
+@if (usuarios.length == 0) {
+<div class="alert alert-warning">No hay ningun usuario registrado en la base de datos </div>
+} @else {
+<table class="table table-hover table-striped my-4">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>email</th>
+            <th>nombre de usuario</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (usuario of filteredUser; track $index) {
+        <tr>
+            <td> {{usuario.id}} </td>
+            <td>{{usuario.name}}</td>
+            <td>{{usuario.lastname}}</td>
+            <td>{{usuario.email}}</td>
+            <td>{{usuario.username}}</td>
+            <td>
+                <button class="btn btn-danger btn-sm" (click)="onRemoveUser(usuario.id)">
+                    Eliminar
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-info btn-sm" [routerLink]="['/user/edit', usuario.id]">
+                    Editar
+                </button>
+            </td>
+
+            <td>
+                <button class="btn btn-primary btn-sm" [routerLink]="['/subir-analisis', usuario.id]">
+                    subir resultado de muestras
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-primary btn-sm" (click)="verTerrenos(usuario.id)">
+                    ver terrenos
+                </button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+}
+
+<paginator [paginator]="paginator" [url]="pageUrl" />

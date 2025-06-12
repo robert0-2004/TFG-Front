@@ -1,0 +1,59 @@
+<app-navbar [terreno]="terreno" [paginator]="paginator"/>
+<router-outlet />
+<div class="d-flex flex-column mx-0">
+   
+
+@if (router.url === '/') {
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/img1.jpg" class="d-block w-100">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Sobre nosotros</h5>
+          <p>Somos una pequeña empresad de analisis de muestras agricolas</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/img2.jpg" class="d-block w-100">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Nuestro servicio</h5>
+          <p>Ofrecemos un servicio de calidad y muy cercano</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/img3.jpg" class="d-block w-100">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Disponivilidad</h5>
+          <p>Tenemos una disponivilidad muy alta practicamente nunca ofrecemos problemas</p>
+        </div>
+      </div>
+    </div>
+  
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+  
+        </div>
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <p>Dirección: Calle del Sol, 73</p>
+          <p>Teléfono: 456-7890</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+    } 
+</div>

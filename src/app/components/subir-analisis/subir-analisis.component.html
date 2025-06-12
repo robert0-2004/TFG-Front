@@ -1,0 +1,36 @@
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <div class="mb-3">
+    <label>Fecha</label>
+    <input type="date" class="form-control" name="fecha" [(ngModel)]="analisis.fecha" required>
+  </div>
+  <div class="mb-3">
+    <label>N (%)</label>
+    <input type="number" step="0.01" class="form-control" name="n" [(ngModel)]="n" required>
+  </div>
+  <div class="mb-3">
+    <label>P (%)</label>
+    <input type="number" step="0.01" class="form-control" name="p" [(ngModel)]="p" required>
+  </div>
+  <div class="mb-3">
+    <label>K (%)</label>
+    <input type="number" step="0.01" class="form-control" name="k" [(ngModel)]="k" required>
+  </div>
+  <div class="mb-3">
+    <label>Ca (%)</label>
+    <input type="number" step="0.01" class="form-control" name="ca" [(ngModel)]="ca" required>
+  </div>
+  <div class="mb-3">
+    <label>Mg (%)</label>
+    <input type="number" step="0.01" class="form-control" name="mg" [(ngModel)]="mg" required>
+  </div>
+  <div class="mb-3">
+    <label>Tipo</label>
+    <input type="text" class="form-control" name="tipo" [(ngModel)]="analisis.tipo" required>
+  </div>
+  <button class="btn btn-success mx-3" type="submit">Subir análisis</button>
+
+  <button type="button" class="btn btn-secondary my-2" (click)="onClear(f)">
+    Clear
+  </button>
+</form>
